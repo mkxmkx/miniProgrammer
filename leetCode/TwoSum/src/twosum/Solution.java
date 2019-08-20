@@ -2,7 +2,7 @@ package twosum;
 
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] flag = new int[nums.length];
+        int[] flag = new int[nums.length];  //辅助记录每个数字的原始数组索引
         for(int i = 0; i<nums.length; i++)
             flag[i] = i;
         //冒泡排序
