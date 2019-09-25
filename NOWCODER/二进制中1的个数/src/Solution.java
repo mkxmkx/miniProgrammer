@@ -1,16 +1,12 @@
-剑指offer——二进制中1的个数
+import java.util.ArrayList;
+import java.util.List;
 
-##【题目描述】
-输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。
-
-## 【解题思路】
-总共有32位，算符号位。
-负数的补码：符号位不变，其余各位取反再加一。
-
-##【代码实现】
-
-```
-public int NumberOf1(int n)
+/**
+ * @Author: makexin
+ * @Date: 2019/9/2511:47
+ */
+public class Solution {
+    public int NumberOf1(int n)
     {
         int m = n;
         if (n<0)
@@ -54,7 +50,9 @@ public int NumberOf1(int n)
         }
         return count;
     }
-```
-
-做完了以后，在网上也看了一下别人的解法，用到了位运算，不太懂。
-
+    public static void main(String[] args)
+    {
+        Solution s = new Solution();
+        System.out.println("result: " + s.NumberOf1(-2147483648));
+    }
+}
