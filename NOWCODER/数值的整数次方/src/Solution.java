@@ -1,19 +1,3 @@
-剑指offer——数值的整数次方
-##  【题目描述】
-给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
-保证base和exponent不同时为0
-
-## 【解题思路】
-求整数次方，第一种方法就是循环，base不断乘。计算exponent次。
-
-第二种方法：要求base的2n次方，可以两个base的n次方相乘。计算exponent/2次。
-exp == 0时，返回1。exp == 1时，返回base。
-
-注意：当次方为负数时，是该数正次方的倒数。
-
-## 【代码实现】
-
-```java
 /**
  * @Author: makexin
  * @Date: 2019/9/2521:17
@@ -53,5 +37,3 @@ public class Solution {
         System.out.println("result: " + s.Power(3,3));
     }
 }
-```
-
