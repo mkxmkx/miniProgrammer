@@ -1,4 +1,5 @@
 import BubbleSort.BubbleSort;
+import InsertionSort.InsertationSort;
 import SelectionSort.SelectionSort;
 
 import java.util.Arrays;
@@ -13,7 +14,9 @@ public class Main {
         int[] array = {2,5,5,8,1,8,0,6};
 //        BubbleSort bubbleSort = new BubbleSort();
 //        System.out.println("bubble sort: "+ Arrays.toString(bubbleSort.sort(array)));
-        SelectionSort selectionSort = new SelectionSort();
-        System.out.println("selection sort: " + Arrays.toString(selectionSort.sort(array)));
+//        SelectionSort selectionSort = new SelectionSort();
+//        System.out.println("selection sort: " + Arrays.toString(selectionSort.sort(array)));
+        InsertationSort insertationSort = new InsertationSort();
+        System.out.println("Insertation sort: " + Arrays.toString(insertationSort.sort(array)));
     }
 }
