@@ -1,6 +1,7 @@
 import BubbleSort.BubbleSort;
 import InsertionSort.InsertationSort;
 import MergeSort.MergeSort;
+import QuickSort.QuickSort;
 import SelectionSort.SelectionSort;
 
 import java.util.Arrays;
@@ -19,8 +20,12 @@ public class Main {
 //        System.out.println("selection sort: " + Arrays.toString(selectionSort.sort(array)));
 //        InsertationSort insertationSort = new InsertationSort();
 //        System.out.println("Insertation sort: " + Arrays.toString(insertationSort.sort(array)));
-        MergeSort mergeSort = new MergeSort();
-        mergeSort.sort(array);
+//        MergeSort mergeSort = new MergeSort();
+//        mergeSort.sort(array);
+//        System.out.println(Arrays.toString(array));
+        QuickSort quickSort = new QuickSort();
+//        quickSort.Sort(array);
+        quickSort.quickSort(array);
         System.out.println(Arrays.toString(array));
     }
 }
