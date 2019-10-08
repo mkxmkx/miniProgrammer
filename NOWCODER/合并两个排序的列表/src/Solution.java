@@ -1,18 +1,11 @@
-## 剑指offer——合并两个排序的列表
-
-## 【题目描述】
-输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
 
 
-## 【解题思路】
-设置一个新的head节点，最后返回的时候返回head.next，即为处理后的新链表。
-循环比较两个链表的元素值，可以新申请空间在新链表上插入元素，也可以不申请空间，在原链表上拼凑。本代码是在原链表上拼凑的，没有新申请空间。
-至少1个链表循环结束之后，退出循环。然后将另一个链表剩余元素全部拼的新链表后面。
-
-## 【代码实现】
-
-```java
-public ListNode Merge(ListNode list1, ListNode list2)
+/**
+ * @Author: makexin
+ * @Date: 2019/10/815:39
+ */
+public class Solution {
+    public ListNode Merge(ListNode list1, ListNode list2)
     {
         ListNode newList = new ListNode(0);
         ListNode p = list1, q = list2, head = newList;
@@ -49,14 +42,8 @@ public ListNode Merge(ListNode list1, ListNode list2)
             newList.next = q;
         return head.next;
     }
-```
 
-
-## 递归版本的实现
-看了别人的思路以后，发现也可以使用递归的思路实现。
-
-```java
-public ListNode merge_digui(ListNode list1, ListNode list2)
+    public ListNode merge_digui(ListNode list1, ListNode list2)
     {
         //首先判断是否为null
         if (list1 == null)
@@ -77,4 +64,4 @@ public ListNode merge_digui(ListNode list1, ListNode list2)
         }
         return newList;
     }
-```
+}
