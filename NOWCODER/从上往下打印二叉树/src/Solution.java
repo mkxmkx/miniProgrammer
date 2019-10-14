@@ -1,14 +1,3 @@
-## 剑指offer——从上往下打印二叉树
-## 【题目描述】
-从上往下打印出二叉树的每个节点，同层节点从左至右打印。
-
-## 【解题思路】
-树的**层序遍历**。
-使用一个队列，将树根入队。每次从队列pop出一个元素，打印该节点，并分别将左右孩子入队。
-
-## 【代码实现】
-
-```java
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -40,5 +29,3 @@ public class Solution {
         return result;
     }
 }
-
-```
