@@ -1,15 +1,3 @@
-##  第一个只出现一次的字符
-## 【题目描述】
-在一个字符串(0<=字符串长度<=10000，全部由字母组成)中找到第一个只出现一次的字符,并返回它的位置, 如果没有则返回 -1（需要区分大小写）.
-
-## 【解题思路】
-需要记录三个数，每个字符对应出现的次数，每个字符在原字符串中的位置。因为都具有一一对应关系，所以使用map来存储。
-第一个map：因为需要是第一个出现一次的字符，因此在计算次数的同时需保持相对顺序不变。使用LinkedHashMap。key为字符，value为出现的次数。
-第二个map：用来保存每个字符在原字符串中第一次出现的索引位置。这个不需要保持加进去值的顺序，HashMap即可。在最终结果中直接检索key就可以。
-
-## 【代码实现】
-
-```java
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -57,5 +45,3 @@ public class Solution {
         System.out.println(new Solution().FirstNotRepeatingChar(s));
     }
 }
-
-```
