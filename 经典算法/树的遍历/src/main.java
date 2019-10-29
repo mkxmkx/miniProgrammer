@@ -1,4 +1,5 @@
 import binaryTree.TreeNode;
+import binaryTree.middleOrder;
 import binaryTree.preOrder;
 
 /**
@@ -11,8 +12,10 @@ public class main {
         TreeNode tree = new TreeNode(2);
         tree.left = new TreeNode(3);
         tree.right = new TreeNode(9);
-        preOrder pre = new preOrder();
-        pre.preOrderTraversal(tree);
+//        preOrder pre = new preOrder();
+//        pre.preOrderTraversal(tree);
+        middleOrder mid = new middleOrder();
+        mid.middleOrderTraversal(tree);
 
     }
 }
