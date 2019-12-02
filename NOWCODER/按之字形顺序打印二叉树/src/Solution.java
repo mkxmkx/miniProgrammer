@@ -1,14 +1,3 @@
-## 剑指offer——按之字形顺序打印二叉树
-### 【题目描述】
-请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。
-### 【解题思路】
-使用两个栈，一个栈p存放奇数层从左到右顺序的，一个栈q存放偶数层从右到左顺序的。
-遍历奇数层时，按照从左到右的顺序，按照左右孩子的顺序将下一层的节点放到p中。由于是栈，所以到遍历栈p的时候，从栈顶开始就是从右到左的顺序了。
-遍历偶数层时，按照右左孩子的顺序将下一层的节点放到p中。
-
-### 【代码实现】
-
-```java
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -54,7 +43,7 @@ public class Solution {
                         p.push(node.left);
                 }
             }
-            result.add(new ArrayList<Integer>(temp));﻿
+            result.add(new ArrayList<Integer>(temp));
             temp.clear();
             flag++;
         }
@@ -65,10 +54,8 @@ public class Solution {
         TreeNode t = new TreeNode(3);
         t.left = new TreeNode(2);
         t.right = new TreeNode(4);
-        Solution s = new Sol﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿ution();
+        Solution s = new Solution();
         s.Print(t);
 
     }
 }
-
-```
