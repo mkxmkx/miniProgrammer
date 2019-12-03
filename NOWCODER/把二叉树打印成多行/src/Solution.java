@@ -1,12 +1,3 @@
-## 剑指offer——把二叉树打印成多行
-### 【题目描述】
-从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
-### 【解题思路】
-借助于两个队列，每层节点使用一个队列存，遍历该层节点的时候把下一层节点存到另外一个队列里。两个队列交替遍历即可。
-
-### 【代码实现】
-
-```java
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -58,5 +49,3 @@ public class Solution {
         return res;
     }
 }
-
-```
