@@ -1,38 +1,3 @@
-## LeetCode——ZigZag Conversion
-### 【题目描述】
-The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
-
-P   A   H   N
-A P L S I I G
-Y   I   R
-And then read line by line: "PAHNAPLSIIGYIR"
-
-Write the code that will take a string and make this conversion given a number of rows:
-
-string convert(string s, int numRows);
-Example 1:
-
-Input: s = "PAYPALISHIRING", numRows = 3
-Output: "PAHNAPLSIIGYIR"
-Example 2:
-
-Input: s = "PAYPALISHIRING", numRows = 4
-Output: "PINALSIGYAHRPI"
-Explanation:
-
-P     I    N
-A   L S  I G
-Y A   H R
-P     I
-
-### 【解题思路】
-按之字形打印。其实就是按之字形把字符串中每一个字符分别赋予到不同的数组中。
-如何让按照之字形，即到达边界范围之后自动反转方向加或减。
-使用一个标志位来判断数组索引应该加还是减即可达到之字形的效果。
-
-### 【代码实现】
-
-```java
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -80,5 +45,3 @@ public class Solution {
         System.out.println(s.convert("PAYPALISHIRING", 3));
     }
 }
-
-```
